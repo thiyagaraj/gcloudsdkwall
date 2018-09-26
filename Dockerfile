@@ -4,6 +4,8 @@ RUN yum update -y && yum install -y \
                     curl \
                     which && \
     yum clean all
+RUN useradd -ms /bin/bash jenkins
+WORKDIR /home/jenkins
 USER jenkins
 RUN curl -sSL https://sdk.cloud.google.com | bash
 ENV PATH $PATH:/root/google-cloud-sdk/bin
