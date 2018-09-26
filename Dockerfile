@@ -8,4 +8,4 @@ RUN useradd -ms /bin/bash jenkins
 WORKDIR /home/jenkins
 USER jenkins
 RUN curl -sSL https://sdk.cloud.google.com | bash
-ENV PATH $PATH:/root/google-cloud-sdk/bin
+ENV PATH $PATH:/home/jenkins/google-cloud-sdk/bin
